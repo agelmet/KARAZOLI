@@ -44,8 +44,6 @@
 
         ::selection { background: var(--warm); color: var(--white); }
 
-        /* ─── LOADER (disabled per request) ─── */
-
         /* ─── NAV ─── */
         .nav {
             position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
@@ -398,9 +396,23 @@
         .pillars .section-tag::before { background: var(--warm-light); }
         .pillars .section-title { color: var(--cream); }
         .pillars .section-title em { color: var(--warm-light); }
-        .pillars-header { margin-bottom: 4rem; }
+        .pillars-header { margin-bottom: 3rem; }
+        .pillars-image-wrap {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+        .pillars-image-wrap img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            border: 1px solid rgba(196,168,130,0.2);
+        }
         .pillars-grid {
-            display: grid; grid-template-columns: repeat(4, 1fr);
+            display: grid; grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
         }
         .pillar-card {
@@ -737,6 +749,7 @@
 </head>
 <body>
 
+<!-- ═══════════════════ NAV ═══════════════════ -->
 <nav class="nav" id="nav">
     <a href="#hero" class="nav-logo">
         <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/KARAZOLS.jpg" alt="Στεφανία Καραζόλη - Λογότυπο">
@@ -755,92 +768,99 @@
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-    <a href="#about" onclick="closeMobile()">Ποια Ειμαι</a>
-    <a href="#services" onclick="closeMobile()">Υπηρεσιες</a>
-    <a href="#pillars" onclick="closeMobile()">Εξειδικευση</a>
-    <a href="#space" onclick="closeMobile()">Ο Χωρος</a>
-    <a href="#reviews" onclick="closeMobile()">Εμπειριες</a>
-    <a href="#contact" onclick="closeMobile()">Κλειστε Ραντεβου</a>
+    <a href="#about" onclick="closeMobile()">Ποια Είμαι</a>
+    <a href="#services" onclick="closeMobile()">Υπηρεσίες</a>
+    <a href="#pillars" onclick="closeMobile()">Εξειδίκευση</a>
+    <a href="#space" onclick="closeMobile()">Ο Χώρος</a>
+    <a href="#reviews" onclick="closeMobile()">Εμπειρίες</a>
+    <a href="#contact" onclick="closeMobile()">Κλείστε Ραντεβού</a>
 </div>
 
+<!-- ═══════════════════ HERO ═══════════════════ -->
 <section class="hero" id="hero">
     <div class="hero-bg">
-        <img src="https://cdn.doctoranytime.gr/practices/05e7a862-ff19-43a5-9ee7-cc8ebe84a852.jpg" alt="Γραφείο Στεφανίας Καραζόλη">
+        <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/DSC_7946.jpg" alt="Γραφείο Στεφανίας Καραζόλη">
     </div>
     <div class="hero-gradient-bottom"></div>
     <div class="hero-content">
-        <div class="hero-tag">Ψυχολογος &mdash; Χολαργος</div>
+        <div class="hero-tag">ΨΥΧΟΛΟΓΟΣ &mdash; ΧΟΛΑΡΓΟΣ</div>
         <h1 class="hero-title">
-            Κλινικη Ανθεκτικοτητα<br>
-            & <em>Ενσυναισθηση</em>
+            Κλινική Ανθεκτικότητα<br>
+            & <em>Ενσυναίσθηση</em>
         </h1>
         <p class="hero-subtitle">
-            Ενα ασφαλες καταφυγιο για καθε σκεψη. Ενας χωρος οπου η κλινικη εμπειρια συναντα την απολυτη ανθρωπια, χωρις κριση, χωρις στιγμα.
+            Ένα ασφαλές καταφύγιο για κάθε σκέψη. Ένας χώρος όπου η κλινική εμπειρία συναντά την απόλυτη ανθρωπιά, χωρίς επίκριση, χωρίς στίγμα.
         </p>
         <div class="hero-actions">
             <a href="#contact" class="btn-primary">
-                <span>Κλειστε Ραντεβου</span>
+                <span>Κλείστε Ραντεβού</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="#about" class="btn-ghost">Γνωριστε με</a>
+            <a href="#about" class="btn-ghost">Γνωρίστε με</a>
         </div>
     </div>
     <div class="hero-stat">
-        <div class="hero-stat-number">Αρ. Αδειας 2165</div>
-        <div class="hero-stat-label">Αδειουχος Ψυχολογος &mdash; Πανειο Πανεπιστημιο</div>
+        <div class="hero-stat-number">Αρ. Άδειας 2165</div>
+        <div class="hero-stat-label">Αδειούχος Ψυχολόγος &mdash; Πάντειο Πανεπιστήμιο</div>
     </div>
 </section>
 
+<!-- ═══════════════════ ABOUT ═══════════════════ -->
 <section class="about" id="about">
     <div class="about-image-wrap reveal">
         <div class="about-image">
-            <img src="https://cdn.doctoranytime.gr/profileimages/419aed23-63a0-4617-a69a-6faa548e9377.jpg" alt="Στεφανία Καραζόλη - Ψυχολόγος">
+            <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/DSC_7973.jpg" alt="Στεφανία Καραζόλη - Ψυχολόγος">
         </div>
     </div>
     <div class="about-text">
-        <div class="section-tag reveal">Ποια Ειμαι</div>
-        <h2 class="section-title reveal">Στεφανια <em>Καραζολη</em></h2>
+        <div class="section-tag reveal">Ποια Είμαι</div>
+        <h2 class="section-title reveal">Στεφανία <em>Καραζόλη</em></h2>
         <p class="section-desc reveal" style="margin-bottom:1rem;">
-            Η Στεφανια Καραζολη ειναι αδειουχος Ψυχολογος (Αρ. Αδειας: 2165/28-3-2017) και διατηρει το ιδιωτικο της γραφειο στον Χολαργο. Αποφοιτη του Παντειου Πανεπιστημιου και κατοχος Μεταπτυχιακου (MSc) στην &laquo;Ψυχιατροδικαστικη&raquo; απο την Ιατρικη Σχολη του Ε.Κ.Π.Α., ολοκληρωνει παραλληλα το εξειδικευμενο Μεταπτυχιακο &laquo;Ποινικο Δικαιο και Εξαρτησεις&raquo; (Α.Π.Θ. / Παν. Λευκωσιας / ΚΕΘΕΑ).
+            Η Στεφανία Καραζόλη είναι αδειούχος Ψυχολόγος (Αρ. Άδειας: 2165/28-3-2017) και διατηρεί το ιδιωτικό της γραφείο στον Χολαργό. Απόφοιτη του Παντείου Πανεπιστημίου και κάτοχος Μεταπτυχιακού (MSc) στην «Ψυχιατροδικαστική» από την Ιατρική Σχολή του Ε.Κ.Π.Α., ολοκληρώνει παράλληλα το εξειδικευμένο Μεταπτυχιακό «Ποινικό Δίκαιο και Εξαρτήσεις» στην Θεραπευτική Κατεύθυνση (Α.Π.Θ. / Παν. Λευκωσίας / ΚΕΘΕΑ).
         </p>
         <p class="section-desc reveal" style="margin-bottom:1rem;">
-            Διαθετει πιστοποιημενη εκπαιδευση στη Γνωσιακη Συμπεριφοριστικη Θεραπεια (CBT) και την Ειδικη Αγωγη. Αυτο που την κανει πραγματικα να ξεχωριζει ειναι η θητεια της στην &laquo;πρωτη γραμμη&raquo; του ανθρωπινου πονου: στο Ψυχιατρικο Καταστημα Κορυδαλλου, στο ΚΕΘΕΑ, στον ΟΚΑΝΑ, στο Πρωτοδικειο Αθηνων και στο &laquo;Χαμογελο του Παιδιου&raquo;, στηριζοντας κακοποιημενα παιδια.
+            Διαθέτει πιστοποιημένη εκπαίδευση στη Γνωσιακή Συμπεριφοριστική Θεραπεία (CBT), στην Εγκληματολογική Ψυχολογία και την Ειδική Αγωγή από το Κ.Ε.Δ.Ι.Β.Ι.Μ. του Ε.Κ.Π.Α.. Αυτό που την κάνει πραγματικά να ξεχωρίζει είναι η εμπειρία της στην «πρώτη γραμμή» του ανθρώπινου πόνου, στην απεξάρτηση, στην ψυχιατρική περίθαλψη και στην παιδική προστασία.
         </p>
         <div class="about-quote reveal">
-            Οταν καθεστε απεναντι της, εχετε απεναντι σας εναν ανθρωπο που δεν σοκαρεται, δεν επικρινει και δεν τρομαζει απο τις δυσκολιες. Φερνει στο γραφειο της απολυτη ψυχραιμια, ρεαλισμο και ενα βαθια ασφαλες πλαισιο.
+            Όταν κάθεστε απέναντί της, έχετε απέναντί σας έναν άνθρωπο που δεν σοκάρεται, δεν επικρίνει και δεν τρομάζει από τις δυσκολίες. Φέρνει στο γραφείο της απόλυτη ψυχραιμία, ρεαλισμό και ένα βαθιά ασφαλές πλαίσιο.
         </div>
         <div class="about-credentials reveal">
             <div class="credential">
                 <div class="credential-value">MSc</div>
-                <div class="credential-label">Ψυχιατροδικαστικη &mdash; ΕΚΠΑ</div>
+                <div class="credential-label">Ψυχιατροδικαστική &mdash; ΕΚΠΑ</div>
             </div>
             <div class="credential">
                 <div class="credential-value">CBT</div>
-                <div class="credential-label">Πιστοποιημενη Εκπαιδευση</div>
+                <div class="credential-label">Πιστοποιημένη Εκπαίδευση</div>
             </div>
             <div class="credential">
                 <div class="credential-value">7+</div>
-                <div class="credential-label">Κλινικες Δομες Εμπειριας</div>
+                <div class="credential-label">Κλινικές Δομές Εμπειρίας</div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- ═══════════════════ SERVICES ═══════════════════ -->
 <section class="services" id="services">
     <div class="services-header">
-        <div class="section-tag reveal">Υπηρεσιες</div>
-        <h2 class="section-title reveal">Πως Μπορω να <em>Βοηθησω</em></h2>
-        <p class="section-desc reveal">Εξειδικευμενες υπηρεσιες ψυχολογικης υποστηριξης, σχεδιασμενες γυρω απο τις πραγματικες σας αναγκες.</p>
+        <div class="section-tag reveal">Υπηρεσίες</div>
+        <h2 class="section-title reveal">Πώς Μπορώ να <em>Βοηθήσω</em></h2>
+        <p class="section-desc reveal">Εξειδικευμένες υπηρεσίες ψυχολογικής υποστήριξης, σχεδιασμένες γύρω από τις πραγματικές σας ανάγκες.</p>
     </div>
     <div class="services-grid">
 
         <div class="service-card reveal">
             <div class="service-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r=".5"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                  <line x1="2" y1="2" x2="22" y2="22"></line>
+                </svg>
             </div>
-            <h3>Διαχειριση Εξαρτησεων & Τοξικων Μοτιβων</h3>
-            <div class="service-includes">Αντιμετωπιση Εξαρτησεων 60' &middot; Ενισχυση Αυτογνωσιας 60' &middot; Συμβουλευτικη Σχεσεων 60'</div>
-            <p>Οι εξαρτησεις δεν αφορουν μονο ουσιες &mdash; αφορουν συχνα συμπεριφορες, ανθρωπους και τοξικες σχεσεις. Με βαρυτατη εξειδικευση σε δομες οπως το ΚΕΘΕΑ και ο ΟΚΑΝΑ, δουλευουμε μαζι για να αναγνωρισουμε το κενο που καλυπτει η εξαρτηση, αναπτυσσοντας υγιεις μηχανισμους διαχειρισης.</p>
+            <h3>Διαχείριση Εξαρτήσεων & Τοξικών Μοτίβων</h3>
+            <div class="service-includes">Αντιμετώπιση Εξαρτήσεων 60' &middot; Ενίσχυση Αυτογνωσίας 60' &middot; Συμβουλευτική Σχέσεων 60'</div>
+            <p>Οι εξαρτήσεις δεν αφορούν μόνο ουσίες &mdash; αφορούν συχνά συμπεριφορές, ανθρώπους και τοξικές σχέσεις. Με εξειδίκευση και εκπαίδευση σε δομές όπως το ΚΕΘΕΑ και ο ΟΚΑΝΑ, δουλεύουμε μαζί για να αναγνωρίσουμε το κενό που καλύπτει η εξάρτηση, αναπτύσσοντας υγιείς μηχανισμούς διαχείρισης.</p>
             <div class="service-tags">
                 <span>ΚΕΘΕΑ</span><span>ΟΚΑΝΑ</span><span>Coping Mechanisms</span>
             </div>
@@ -850,11 +870,11 @@
             <div class="service-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </div>
-            <h3>CBT: Αγχος, Πανικος & Καταθλιψη</h3>
-            <div class="service-includes">Διαχειριση Αγχους 60' &middot; Κρισεις Πανικου 60' &middot; Φοβιες 60' &middot; Καταθλιψη 60' &middot; Αυτοεκτιμηση 60'</div>
-            <p>Μεσω της Γνωσιακης Συμπεριφοριστικης Θεραπειας, εστιαζουμε στο &laquo;εδω και τωρα&raquo;. Εντοπιζουμε τις παραμορφωμενες σκεψεις που σας εγκλωβιζουν και χτιζουμε πρακτικα εργαλεια για να διαχειριστειτε τις κρισεις και να επαναδομησετε την αυτοεκτιμηση σας.</p>
+            <h3>Άγχος, Πανικός & Κατάθλιψη</h3>
+            <div class="service-includes">Διαχείριση Άγχους 60' &middot; Κρίσεις Πανικού 60' &middot; Φοβίες 60' &middot; Κατάθλιψη 60' &middot; Αυτοεκτίμηση 60'</div>
+            <p>Μέσω συμβουλευτικής βασισμένης στις αρχές της Γνωσιακής Συμπεριφοριστικής Θεραπείας, εστιάζουμε στο «εδώ και τώρα». Εντοπίζουμε τις δυσλειτουργικές σκέψεις που σας εγκλωβίζουν και χτίζουμε πρακτικά εργαλεία για να διαχειριστείτε τις κρίσεις και να επαναδομήσετε την αυτοεκτίμησή σας.</p>
             <div class="service-tags">
-                <span>CBT</span><span>Αγχος</span><span>Πανικος</span><span>Καταθλιψη</span>
+                <span>CBT</span><span>ΑΓΧΟΣ</span><span>ΠΑΝΙΚΟΣ</span><span>ΚΑΤΑΘΛΙΨΗ</span>
             </div>
         </div>
 
@@ -862,11 +882,11 @@
             <div class="service-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
             </div>
-            <h3>Τραυμα, Πενθος & Θυμος</h3>
-            <div class="service-includes">Θλιψη & Στενοχωρια 60' &middot; Πενθος 60' &middot; Θυμος 60' &middot; Burnout 60'</div>
-            <p>Η απωλεια, οι τραυματικες εμπειριες και η επαγγελματικη εξουθενωση προκαλουν βαθια θλιψη η εκρηξεις θυμου. Εχοντας υποστηριξει ευαλωτες ομαδες σε βαθια κριση, παρεχεται ενα ανθεκτικο πλαισιο αποδοχης και επουλωσης.</p>
+            <h3>Τραύμα, Πένθος & Θυμός</h3>
+            <div class="service-includes">Θλίψη & Στενοχώρια 60' &middot; Πένθος 60' &middot; Θυμός 60' &middot; Burnout 60'</div>
+            <p>Η απώλεια, οι τραυματικές εμπειρίες και η επαγγελματική εξουθένωση προκαλούν βαθιά θλίψη ή εκρήξεις θυμού. Έχοντας υποστηρίξει ευάλωτες ομάδες σε βαθιά κρίση, παρέχεται ένα ανθεκτικό πλαίσιο αποδοχής και επούλωσης.</p>
             <div class="service-tags">
-                <span>Τραυμα</span><span>Πενθος</span><span>Burnout</span>
+                <span>ΤΡΑΥΜΑ</span><span>ΠΕΝΘΟΣ</span><span>BURNOUT</span>
             </div>
         </div>
 
@@ -874,111 +894,117 @@
             <div class="service-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
             </div>
-            <h3>Γονεικοτητα, Παιδικη Προστασια & Προσανατολισμος</h3>
-            <div class="service-includes">Συμβουλευτικη Γονεων 60' &middot; Επαγγελματικος Προσανατολισμος 60' &middot; Online Συνεδρια 60'</div>
-            <p>Αντλωντας απο πολυετη εργασια στην Παιδικη Προστασια, το &laquo;Χαμογελο του Παιδιου&raquo; και Κεντρα Οικογενειακης Υποστηριξης, παρεχεται υψηλου επιπεδου συμβουλευτικη σε θεματα εκφοβισμου, εφηβειας και οικογενειακων συγκρουσεων. Ολες οι υπηρεσιες διαθεσιμες και διαδικτυακα.</p>
+            <h3>Γονεϊκότητα, Παιδική Προστασία & Προσανατολισμός</h3>
+            <div class="service-includes">Συμβουλευτική Γονέων 60' &middot; Επαγγελματικός Προσανατολισμός 60' &middot; Online Συνεδρίες 60'</div>
+            <p>Με πολυδιάστατη εμπειρία στον τομέα της παιδικής προστασίας παρέχεται υψηλού επιπέδου συμβουλευτική σε θέματα εκφοβισμού, εφηβείας και οικογενειακών συγκρούσεων. Όλες οι υπηρεσίες διαθέσιμες και διαδικτυακά.</p>
             <div class="service-tags">
-                <span>Γονεις</span><span>Bullying</span><span>Online</span>
+                <span>ΓΟΝΕΙΣ</span><span>BULLYING</span><span>ONLINE</span>
             </div>
         </div>
 
     </div>
 </section>
 
+<!-- ═══════════════════ PILLARS ═══════════════════ -->
 <section class="pillars" id="pillars">
     <div class="pillars-header">
-        <div class="section-tag reveal">Κλινικο Αποτυπωμα</div>
-        <h2 class="section-title reveal">Γιατι να με Επιλεξετε<br>ως <em>Συνοδοιπορο σας</em></h2>
+        <div class="section-tag reveal">Κλινικό Αποτύπωμα</div>
+        <h2 class="section-title reveal">Γιατί να με Επιλέξετε<br>ως <em>Συνοδοιπόρο σας</em></h2>
     </div>
+    
+    <div class="pillars-image-wrap reveal">
+        <img src="https://github.com/agelmet/KARAZOLI/blob/main/DSC_7975.jpg?raw=true" alt="Στεφανία Καραζόλη στο γραφείο της">
+    </div>
+
     <div class="pillars-grid">
         <div class="pillar-card reveal">
             <div class="pillar-num">01</div>
-            <h3>Ψυχιατροδικαστικη Εξειδικευση</h3>
-            <p>Η σπανια αυτη εκπαιδευση (Ιατρικη ΕΚΠΑ) σημαινει οτι κατανοω σε τεραστιο βαθος την παραβατικοτητα, το τραυμα, τη βια και τις πιο σκοτεινες πτυχες της ανθρωπινης φυσης. Δεν υπαρχει τιποτα που να ντρεπεστε να μοιραστειτε στο γραφειο μου.</p>
+            <h3>Α. Ψυχιατροδικαστική Εξειδίκευση</h3>
+            <p>Η σπάνια αυτή εκπαίδευση (Ιατρική ΕΚΠΑ) σημαίνει ότι κατανοώ σε βάθος τη σχέση ψυχικής διαταραχής και παραβατικότητας, το τραύμα, τη βία και τις πιο σκοτεινές πτυχές της ανθρώπινης φύσης. Παρέχω έναν ασφαλή χώρο θεραπείας χωρίς επίκριση με στόχο την υποστήριξη για αλλαγή.</p>
         </div>
         <div class="pillar-card reveal">
             <div class="pillar-num">02</div>
-            <h3>Εμπειρια Πρωτης Γραμμης</h3>
-            <p>Δεν εμαθα την ψυχολογια μονο μεσα απο βιβλια. Την εμαθα στις φυλακες, στα κεντρα απεξαρτησης, στα δικαστηρια και στις δομες κακοποιημενων παιδιων. Αυτο με εχει κανει μια θεραπευτρια απολυτως γειωμενη, ρεαλιστρια και εξαιρετικα ανθεκτικη.</p>
+            <h3>Β. Εμπειρία Πρώτης Γραμμής</h3>
+            <p>Δεν έμαθα την ψυχολογία μόνο μέσα από βιβλία. Την έμαθα στις φυλακές, στα κέντρα απεξάρτησης, στα δικαστήρια και στις δομές κακοποιημένων παιδιών. Αυτό με έχει κάνει μια θεραπεύτρια απολύτως γειωμένη, ρεαλίστρια και εξαιρετικά ανθεκτική.</p>
         </div>
         <div class="pillar-card reveal">
             <div class="pillar-num">03</div>
-            <h3>Αυθεντια στις Εξαρτησεις</h3>
-            <p>Με εκπαιδευση σε κορυφαιους φορεις (ΚΕΘΕΑ, ΟΚΑΝΑ, ΑΠΘ), προσφερω επιστημονικα τεκμηριωμενες παρεμβασεις για καθε ειδους εξαρτηση, κατανοωντας τους μηχανισμους της υποτροπης και της αναρρωσης.</p>
-        </div>
-        <div class="pillar-card reveal">
-            <div class="pillar-num">04</div>
-            <h3>Η Δομη της CBT</h3>
-            <p>Συνδυαζω τη βαθια κλινικη ενσυναισθηση με τα πρακτικα, μετρησιμα και δομημενα εργαλεια της Γνωσιακης Συμπεριφορικης Θεραπειας, για να βλεπετε πραγματικη, εφαρμοσιμη αλλαγη στην καθημερινοτητα σας.</p>
+            <h3>Γ. Εξειδίκευση στις Εξαρτήσεις</h3>
+            <p>Με εκπαίδευση σε κορυφαίους φορείς (ΚΕΘΕΑ, ΟΚΑΝΑ, ΑΠΘ), προσφέρω επιστημονικά τεκμηριωμένες παρεμβάσεις για κάθε είδους εξάρτηση, κατανοώντας τους μηχανισμούς της υποτροπής και της ανάρρωσης.</p>
         </div>
     </div>
 </section>
 
+<!-- ═══════════════════ JOURNEY ═══════════════════ -->
 <section class="journey" id="journey">
     <div class="journey-header">
-        <div class="section-tag reveal">Η Πορεια</div>
-        <h2 class="section-title reveal">Η Διαδρομη <em>Μαζι μας</em></h2>
-        <p class="section-desc reveal">Μια δομημενη αλλα ευελικτη διαδρομη προς την εσωτερικη σας ισορροπια.</p>
+        <div class="section-tag reveal">Η Πορεία</div>
+        <h2 class="section-title reveal">Η Διαδρομή <em>Μαζί μας</em></h2>
+        <p class="section-desc reveal">Μια δομημένη αλλά ευέλικτη διαδρομή προς την εσωτερική σας ισορροπία.</p>
     </div>
     <div class="journey-steps">
         <div class="step reveal">
             <div class="step-circle">1</div>
-            <h3>Επικοινωνια</h3>
-            <p>Η πρωτη σας κινηση φροντιδας. Κλεινουμε τη μερα και ωρα που σας εξυπηρετει.</p>
+            <h3>Επικοινωνία</h3>
+            <p>Η πρώτη σας κίνηση φροντίδας. Κλείνουμε τη μέρα και ώρα που σας εξυπηρετεί.</p>
         </div>
         <div class="step reveal">
             <div class="step-circle">2</div>
-            <h3>Πρωτη Αξιολογηση</h3>
-            <p>Γνωριμια σε ασφαλες περιβαλλον. Ακουμε τις αναγκες σας χωρις καμια κριτικη.</p>
+            <h3>Πρώτη Αξιολόγηση</h3>
+            <p>Γνωριμία σε ασφαλές περιβάλλον. Ακούμε τις ανάγκες σας χωρίς καμία κριτική.</p>
         </div>
         <div class="step reveal">
             <div class="step-circle">3</div>
-            <h3>Θεραπευτικο Πλανο</h3>
-            <p>Σχεδιαζουμε μια προσεγγιση που ταιριαζει αποκλειστικα στη δικη σας ιδιοσυγκρασια.</p>
+            <h3>Θεραπευτικό Πλάνο</h3>
+            <p>Σχεδιάζουμε μια προσέγγιση που ταιριάζει αποκλειστικά στο δικό σας αίτημα.</p>
         </div>
         <div class="step reveal">
             <div class="step-circle">4</div>
-            <h3>Επουλωση & Αναπτυξη</h3>
-            <p>Σταθερα βηματα προς την αυτογνωσια, την ανθεκτικοτητα και μια πιο ισορροπημενη ζωη.</p>
+            <h3>Επούλωση & Ανάπτυξη</h3>
+            <p>Σταθερά βήματα προς την αυτογνωσία, την ανθεκτικότητα και μια πιο ισορροπημένη ζωή.</p>
         </div>
     </div>
 </section>
 
+<!-- ═══════════════════ SPACE ═══════════════════ -->
 <section class="space" id="space">
     <div class="space-header">
-        <div class="section-tag reveal">Ο Χωρος</div>
-        <h2 class="section-title reveal">Ενα Περιβαλλον <em>Ηρεμιας</em></h2>
-        <p class="section-desc reveal">Σχεδιασμενο για να αποπνεει ζεστασια, ηρεμια και απολυτη ιδιωτικοτητα.</p>
+        <div class="section-tag reveal">Ο Χώρος</div>
+        <h2 class="section-title reveal">Ένα Περιβάλλον <em>Ηρεμίας</em></h2>
+        <p class="section-desc reveal">Σχεδιασμένο για να αποπνέει ζεστασιά, ηρεμία και απόλυτη ιδιωτικότητα.</p>
     </div>
     <div class="space-gallery">
         <div class="space-item reveal" onclick="openLightbox(this)">
-            <img src="https://cdn.doctoranytime.gr/practices/a631b706-0b10-4016-8ee7-b98e7b24331f.jpg" alt="Χωρος γραφειου 1">
+            <img src="https://github.com/agelmet/KARAZOLI/blob/main/DSC_7958.jpg?raw=true" alt="Χώρος γραφείου 1">
         </div>
         <div class="space-item reveal" onclick="openLightbox(this)">
-            <img src="https://cdn.doctoranytime.gr/practices/05e7a862-ff19-43a5-9ee7-cc8ebe84a852.jpg" alt="Χωρος γραφειου 2">
+            <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/DSC_7961.jpg" alt="Χώρος γραφείου 2">
         </div>
         <div class="space-item reveal" onclick="openLightbox(this)">
-            <img src="https://cdn.doctoranytime.gr/practices/e7ea3b3b-687b-458b-9b71-b46d95d73820.jpg" alt="Χωρος γραφειου 3">
+            <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/DSC_7958.jpg" alt="Χώρος γραφείου 3">
         </div>
         <div class="space-item reveal" onclick="openLightbox(this)">
-            <img src="https://cdn.doctoranytime.gr/practices/eedcc4b5-1bbe-454e-937e-7a3d41e08170.jpg" alt="Χωρος γραφειου 4">
+            <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/DSC_7946.jpg" alt="Χώρος γραφείου 4">
         </div>
     </div>
 </section>
 
+<!-- Lightbox -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-    <img id="lightboxImg" src="" alt="Φωτογραφια χωρου">
+    <img id="lightboxImg" src="" alt="Φωτογραφία χώρου">
 </div>
 
+<!-- ═══════════════════ REVIEWS ═══════════════════ -->
 <section class="reviews" id="reviews">
     <div class="reviews-header">
-        <div class="section-tag reveal">Εμπειριες</div>
-        <h2 class="section-title reveal">Οσα Λενε οι <em>Θεραπευομενοι</em></h2>
-        <p class="section-desc reveal">Η εμπιστοσυνη σας ειναι η μεγαλυτερη αποδειξη της δουλειας μας.</p>
+        <div class="section-tag reveal">Εμπειρίες</div>
+        <h2 class="section-title reveal">Όσα Λένε οι <em>Θεραπευόμενοι</em></h2>
+        <p class="section-desc reveal">Η εμπιστοσύνη σας είναι η μεγαλύτερη απόδειξη της δουλειάς μας.</p>
     </div>
     <div class="reviews-track-wrap">
         <div class="reviews-track" id="reviewsTrack">
+            <!-- Set 1 -->
             <div class="review-card">
                 <div class="review-top">
                     <div class="review-score">
@@ -987,9 +1013,9 @@
                     </div>
                     <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
-                <div class="review-text">Η κυρια Καραζολη ειναι μια αξιολογη επαγγελματιας που σεβεται και εκτιμα τον ανθρωπο που εχει απεναντι της. Ηταν και ειναι εκει να με ακουσει στους οποιους προβληματισμους ειχα και εχω. Μεσα απο τα ερωτηματα που μου θετει στη διαρκεια της συνεδριας με βοηθαει πολυ να αναστοχαστω καθως βρισκω τις απαντησεις μονη μου.</div>
+                <div class="review-text">Η κυρία Καραζόλη είναι μια αξιόλογη επαγγελματίας που σέβεται και εκτιμά τον άνθρωπο που έχει απέναντί της. Ήταν και είναι εκεί να με ακούσει στους όποιους προβληματισμούς είχα και έχω. Μέσα από τα ερωτήματα που μου θέτει στη διάρκεια της συνεδρίας με βοηθάει πολύ να αναστοχαστώ καθώς βρίσκω τις απαντήσεις μόνη μου.</div>
                 <div class="review-author">ΚΥΡΙΑΚΗ</div>
-                <div class="review-date">09 Μαιου 2025 &middot; 1 αξιολογηση</div>
+                <div class="review-date">09 Μαΐου 2025 &middot; 1 αξιολόγηση</div>
             </div>
             <div class="review-card">
                 <div class="review-top">
@@ -999,9 +1025,9 @@
                     </div>
                     <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
-                <div class="review-text">Εξαιρετικη ψυχολογος! Με ενσυναισθηση και ανθρωπια! Με βοηθησε να διαχειριστω πολυ σοβαρα θεματα που με απασχολουσαν επι χρονια με αριστο τροπο!</div>
+                <div class="review-text">Εξαιρετική ψυχολόγος! Με ενσυναίσθηση και ανθρωπιά! Με βοήθησε να διαχειριστώ πολύ σοβαρά θέματα που με απασχολούσαν επί χρόνια με άριστο τρόπο!</div>
                 <div class="review-author">ΧΡΥΣΑ</div>
-                <div class="review-date">01 Μαιου 2025 &middot; 1 αξιολογηση</div>
+                <div class="review-date">01 Μαΐου 2025 &middot; 1 αξιολόγηση</div>
             </div>
             <div class="review-card">
                 <div class="review-top">
@@ -1011,9 +1037,9 @@
                     </div>
                     <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
-                <div class="review-text">Η Στεφανια ειναι εξαιρετικη επαγγελματιας, γεματη υπομονη, κατανοηση και φροντιδα για τους πελατες της.</div>
+                <div class="review-text">Η Στεφανία είναι εξαιρετική επαγγελματίας, γεμάτη υπομονή, κατανόηση και φροντίδα για τους πελάτες της.</div>
                 <div class="review-author">ΜΕΛΙΝΑ</div>
-                <div class="review-date">30 Απριλιου 2025 &middot; 1 αξιολογηση</div>
+                <div class="review-date">30 Απριλίου 2025 &middot; 1 αξιολόγηση</div>
             </div>
             <div class="review-card">
                 <div class="review-top">
@@ -1023,9 +1049,9 @@
                     </div>
                     <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
-                <div class="review-text">Η κα Καραζολη ειναι μια εξαιρετη επαγγελματιας, μου ενεπνευσε εμπιστοσυνη και ασφαλεια. Εξειδικευμενη στο αντικειμενο της, με ενσυναισθηση και απολυτη προσηλωση στο προβλημα μου. Με βοηθησε και συνεχιζει ακομα.</div>
+                <div class="review-text">Η κα Καραζόλη είναι μια εξαίρετη επαγγελματίας, μου ενέπνευσε εμπιστοσύνη και ασφάλεια. Εξειδικευμένη στο αντικείμενό της, με ενσυναίσθηση και απόλυτη προσήλωση στο πρόβλημά μου. Με βοήθησε και συνεχίζει ακόμα.</div>
                 <div class="review-author">ΣΤΕΛΛΑ</div>
-                <div class="review-date">30 Απριλιου 2025 &middot; 1 αξιολογηση</div>
+                <div class="review-date">30 Απριλίου 2025 &middot; 1 αξιολόγηση</div>
             </div>
             <div class="review-card">
                 <div class="review-top">
@@ -1035,9 +1061,9 @@
                     </div>
                     <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
-                <div class="review-text">Εξαιρετικη επαγγελματιας! Απο την πρωτη κιολας συνεδρια ενιωσα ασφαλης και ανετα. Η κυρια Καραζολη διαθετει ευαισθησια και κατανοηση. Η επικοινωνια μαζι της ηταν αμεση και ειλικρινης. Την συνιστω ανεπιφυλακτα!</div>
+                <div class="review-text">Εξαιρετική επαγγελματίας! Από την πρώτη κιόλας συνεδρία ένιωσα ασφαλής και άνετα. Η κυρία Καραζόλη διαθέτει ευαισθησία και κατανόηση. Η επικοινωνία μαζί της ήταν άμεση και ειλικρινής. Την συνιστώ ανεπιφύλακτα!</div>
                 <div class="review-author">ΒΑΣΙΛΙΚΗ</div>
-                <div class="review-date">30 Απριλιου 2025 &middot; 1 αξιολογηση</div>
+                <div class="review-date">30 Απριλίου 2025 &middot; 1 αξιολόγηση</div>
             </div>
             <div class="review-card">
                 <div class="review-top">
@@ -1047,10 +1073,11 @@
                     </div>
                     <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
-                <div class="review-text">Η κυρια Καραζολη ειναι απο τους ανθρωπους που νιωθεις τυχερος που συναντησες. Απο την πρωτη στιγμη ενιωσα ανετα και ασφαλης. Ειναι παντα ηρεμη, προσιτη και πραγματικα σε ακουει. Με βοηθησε να βαλω σε ταξη τις σκεψεις μου. Καθε συνεδρια μαζι της ειναι μια ανασα.</div>
+                <div class="review-text">Η κυρία Καραζόλη είναι από τους ανθρώπους που νιώθεις τυχερός που συνάντησες. Από την πρώτη στιγμή ένιωσα άνετα και ασφαλής. Είναι πάντα ήρεμη, προσιτή και πραγματικά σε ακούει. Με βοήθησε να βάλω σε τάξη τις σκέψεις μου. Κάθε συνεδρία μαζί της είναι μια ανάσα.</div>
                 <div class="review-author">ΑΝΔΡΕΑΣ</div>
-                <div class="review-date">30 Απριλιου 2025 &middot; 1 αξιολογηση</div>
+                <div class="review-date">30 Απριλίου 2025 &middot; 1 αξιολόγηση</div>
             </div>
+            <!-- Set 2 (duplicate for infinite scroll) -->
             <div class="review-card">
                 <div class="review-top">
                     <div class="review-score">
@@ -1059,9 +1086,9 @@
                     </div>
                     <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
-                <div class="review-text">Η κυρια Καραζολη ειναι μια αξιολογη επαγγελματιας που σεβεται και εκτιμα τον ανθρωπο που εχει απεναντι της. Ηταν και ειναι εκει να με ακουσει στους οποιους προβληματισμους ειχα και εχω. Μεσα απο τα ερωτηματα που μου θετει στη διαρκεια της συνεδριας με βοηθαει πολυ να αναστοχαστω καθως βρισκω τις απαντησεις μονη μου.</div>
+                <div class="review-text">Η κυρία Καραζόλη είναι μια αξιόλογη επαγγελματίας που σέβεται και εκτιμά τον άνθρωπο που έχει απέναντί της. Ήταν και είναι εκεί να με ακούσει στους όποιους προβληματισμούς είχα και έχω. Μέσα από τα ερωτήματα που μου θέτει στη διάρκεια της συνεδρίας με βοηθάει πολύ να αναστοχαστώ καθώς βρίσκω τις απαντήσεις μόνη μου.</div>
                 <div class="review-author">ΚΥΡΙΑΚΗ</div>
-                <div class="review-date">09 Μαιου 2025 &middot; 1 αξιολογηση</div>
+                <div class="review-date">09 Μαΐου 2025 &middot; 1 αξιολόγηση</div>
             </div>
             <div class="review-card">
                 <div class="review-top">
@@ -1071,9 +1098,9 @@
                     </div>
                     <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
-                <div class="review-text">Εξαιρετικη ψυχολογος! Με ενσυναισθηση και ανθρωπια! Με βοηθησε να διαχειριστω πολυ σοβαρα θεματα που με απασχολουσαν επι χρονια με αριστο τροπο!</div>
+                <div class="review-text">Εξαιρετική ψυχολόγος! Με ενσυναίσθηση και ανθρωπιά! Με βοήθησε να διαχειριστώ πολύ σοβαρά θέματα που με απασχολούσαν επί χρόνια με άριστο τρόπο!</div>
                 <div class="review-author">ΧΡΥΣΑ</div>
-                <div class="review-date">01 Μαιου 2025 &middot; 1 αξιολογηση</div>
+                <div class="review-date">01 Μαΐου 2025 &middot; 1 αξιολόγηση</div>
             </div>
             <div class="review-card">
                 <div class="review-top">
@@ -1083,9 +1110,9 @@
                     </div>
                     <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
-                <div class="review-text">Η Στεφανια ειναι εξαιρετικη επαγγελματιας, γεματη υπομονη, κατανοηση και φροντιδα για τους πελατες της.</div>
+                <div class="review-text">Η Στεφανία είναι εξαιρετική επαγγελματίας, γεμάτη υπομονή, κατανόηση και φροντίδα για τους πελάτες της.</div>
                 <div class="review-author">ΜΕΛΙΝΑ</div>
-                <div class="review-date">30 Απριλιου 2025 &middot; 1 αξιολογηση</div>
+                <div class="review-date">30 Απριλίου 2025 &middot; 1 αξιολόγηση</div>
             </div>
             <div class="review-card">
                 <div class="review-top">
@@ -1095,9 +1122,9 @@
                     </div>
                     <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
-                <div class="review-text">Η κα Καραζολη ειναι μια εξαιρετη επαγγελματιας, μου ενεπνευσε εμπιστοσυνη και ασφαλεια. Εξειδικευμενη στο αντικειμενο της, με ενσυναισθηση και απολυτη προσηλωση στο προβλημα μου. Με βοηθησε και συνεχιζει ακομα.</div>
+                <div class="review-text">Η κα Καραζόλη είναι μια εξαίρετη επαγγελματίας, μου ενέπνευσε εμπιστοσύνη και ασφάλεια. Εξειδικευμένη στο αντικείμενό της, με ενσυναίσθηση και απόλυτη προσήλωση στο πρόβλημά μου. Με βοήθησε και συνεχίζει ακόμα.</div>
                 <div class="review-author">ΣΤΕΛΛΑ</div>
-                <div class="review-date">30 Απριλιου 2025 &middot; 1 αξιολογηση</div>
+                <div class="review-date">30 Απριλίου 2025 &middot; 1 αξιολόγηση</div>
             </div>
             <div class="review-card">
                 <div class="review-top">
@@ -1107,9 +1134,9 @@
                     </div>
                     <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
-                <div class="review-text">Εξαιρετικη επαγγελματιας! Απο την πρωτη κιολας συνεδρια ενιωσα ασφαλης και ανετα. Η κυρια Καραζολη διαθετει ευαισθησια και κατανοηση. Η επικοινωνια μαζι της ηταν αμεση και ειλικρινης. Την συνιστω ανεπιφυλακτα!</div>
+                <div class="review-text">Εξαιρετική επαγγελματίας! Από την πρώτη κιόλας συνεδρία ένιωσα ασφαλής και άνετα. Η κυρία Καραζόλη διαθέτει ευαισθησία και κατανόηση. Η επικοινωνία μαζί της ήταν άμεση και ειλικρινής. Την συνιστώ ανεπιφύλακτα!</div>
                 <div class="review-author">ΒΑΣΙΛΙΚΗ</div>
-                <div class="review-date">30 Απριλιου 2025 &middot; 1 αξιολογηση</div>
+                <div class="review-date">30 Απριλίου 2025 &middot; 1 αξιολόγηση</div>
             </div>
             <div class="review-card">
                 <div class="review-top">
@@ -1119,69 +1146,80 @@
                     </div>
                     <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
-                <div class="review-text">Η κυρια Καραζολη ειναι απο τους ανθρωπους που νιωθεις τυχερος που συναντησες. Απο την πρωτη στιγμη ενιωσα ανετα και ασφαλης. Ειναι παντα ηρεμη, προσιτη και πραγματικα σε ακουει. Με βοηθησε να βαλω σε ταξη τις σκεψεις μου. Καθε συνεδρια μαζι της ειναι μια ανασα.</div>
+                <div class="review-text">Η κυρία Καραζόλη είναι από τους ανθρώπους που νιώθεις τυχερός που συνάντησες. Από την πρώτη στιγμή ένιωσα άνετα και ασφαλής. Είναι πάντα ήρεμη, προσιτή και πραγματικά σε ακούει. Με βοήθησε να βάλω σε τάξη τις σκέψεις μου. Κάθε συνεδρία μαζί της είναι μια ανάσα.</div>
                 <div class="review-author">ΑΝΔΡΕΑΣ</div>
-                <div class="review-date">30 Απριλιου 2025 &middot; 1 αξιολογηση</div>
+                <div class="review-date">30 Απριλίου 2025 &middot; 1 αξιολόγηση</div>
             </div>
         </div>
     </div>
     <div class="reviews-more reveal">
         <a href="https://www.doctoranytime.gr/d/Psychologos/karazoli-stefania" target="_blank" rel="noopener">
-            Περισσοτερες αξιολογησεις στο
+            Περισσότερες αξιολογήσεις στο
             <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" alt="doctoranytime">
         </a>
     </div>
 </section>
 
+<!-- ═══════════════════ CONTACT ═══════════════════ -->
 <section class="contact" id="contact">
     <div class="contact-cta">
-        <div class="section-tag">Ραντεβου</div>
-        <h2>Η επουλωση ξεκινα με <em>ενα βημα</em></h2>
-        <p>Επικοινωνηστε μαζι μας για να ορισουμε την πρωτη σας συνεδρια σε ενα περιβαλλον απολυτης αποδοχης και εμπιστευτικοτητας.</p>
-        <a href="tel:2107447613" class="btn-primary" style="display:inline-flex;">
-            <span>Καλεστε Τωρα</span>
+        <div class="section-tag">Ραντεβού</div>
+        <h2>Η επούλωση ξεκινά με <em>ένα βήμα</em></h2>
+        <p>Επικοινωνήστε μαζί μας για να ορίσουμε την πρώτη σας συνεδρία σε ένα περιβάλλον απόλυτης αποδοχής και εμπιστευτικότητας.</p>
+        <a href="tel:697540832" class="btn-primary" style="display:inline-flex;">
+            <span>Καλέστε Τώρα</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         </a>
     </div>
     <div class="contact-info">
-        <h3>Στοιχεια Επικοινωνιας</h3>
+        <h3>Στοιχεία Επικοινωνίας</h3>
 
         <div class="contact-detail">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <div class="contact-detail-text">
-                <div class="contact-detail-label">Διευθυνση</div>
-                <div class="contact-detail-value">Βουτσινα 89, Χολαργος, Αττικη</div>
+                <div class="contact-detail-label">Διεύθυνση</div>
+                <div class="contact-detail-value">Βουτσινά 89, Χολαργός, Αττική</div>
             </div>
         </div>
 
         <div class="contact-detail">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             <div class="contact-detail-text">
-                <div class="contact-detail-label">Τηλεφωνο</div>
-                <div class="contact-detail-value"><a href="tel:2107447613">210 744 7613</a></div>
+                <div class="contact-detail-label">Τηλέφωνο</div>
+                <div class="contact-detail-value"><a href="tel:697540832">697540832</a></div>
             </div>
         </div>
 
         <div class="contact-detail">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             <div class="contact-detail-text">
-                <div class="contact-detail-label">Ωραριο Λειτουργιας</div>
-                <div class="contact-detail-value">Δευτερα &ndash; Παρασκευη, κατοπιν ραντεβου</div>
+                <div class="contact-detail-label">Ωράριο Λειτουργίας</div>
+                <div class="contact-detail-value">Δευτέρα &ndash; Παρασκευή, κατόπιν ραντεβού</div>
+            </div>
+        </div>
+
+        <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <div class="contact-detail-text">
+                <div class="contact-detail-label">Τρόπος Συνεδριών</div>
+                <div class="contact-detail-value">Παρέχεται δυνατότητα για διά ζώσης συνεδρίες στο γραφείο καθώς και online.</div>
             </div>
         </div>
 
         <a href="https://www.doctoranytime.gr/d/Psychologos/karazoli-stefania" target="_blank" rel="noopener" class="doctoranytime-link">
             <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" alt="doctoranytime">
-            <span>Κλειστε online μεσω doctoranytime</span>
+            <span>Κλείστε online μέσω doctoranytime</span>
         </a>
     </div>
 </section>
 
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
 <footer class="footer">
-    <div class="footer-copy">&copy; 2026 Στεφανια Καραζολη. Ολα τα δικαιωματα διατηρουνται.</div>
+    <div class="footer-copy">&copy; 2026 Στεφανία Καραζόλη. Όλα τα δικαιώματα διατηρούνται.</div>
     <div class="footer-credit"><a href="https://advonmedia.com" target="_blank" rel="noopener">Designed by Advon Media</a></div>
 </footer>
 
+<!-- ═══════════════════ SCRIPTS ═══════════════════ -->
 <script>
     // Nav scroll effect
     const nav = document.getElementById('nav');
